@@ -1,0 +1,297 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: 0.5s ease-in-out;
+}
+
+@media (min-width: 992px) {
+  .rounded-lg-3 {
+    border-radius: 0.3rem;
+  }
+}
+
+.product-device {
+  position: absolute;
+  right: 10%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: rgb(165, 40, 40);
+  border-radius: 21px;
+  transform: rotate(30deg);
+}
+
+.product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-color: rgba(122, 52, 52, 0.1);
+  border-radius: 5px;
+}
+
+.product-device-2 {
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 5%;
+  background-color: #ca9090;
+}
+
+/*
+ * Extra utilities
+ */
+
+.flex-equal > * {
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    flex: 1;
+  }
+}
+
+.general_div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  background: white;
+  margin: auto;
+}
+
+.container {
+  background: white;
+  margin: 0 auto;
+  /*display:flex;*/
+  width: 90%;
+}
+
+.down_div {
+  background: black;
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  height: 60px;
+}
+
+.image {
+  background: rgb(231, 196, 196);
+  margin: 0 auto;
+  display: flex;
+  width: 50%;
+  max-height: 50%;
+}
+
+.image_a {
+  background: rgb(199, 127, 127);
+  margin: 0 auto;
+  display: flex;
+  width: 70%;
+  height: 300px;
+}
+
+.product {
+  width: 40%;
+  font-size: 16px;
+}
+
+.about {
+  background: rgb(236, 202, 202);
+  margin: 0 auto;
+  width: 80%;
+  height: auto;
+  padding: 20px;
+}
+
+.about h1 {
+  text-align: center;
+  color: black;
+  font-family: ARIAL;
+}
+
+.about h4 {
+  text-align: right;
+  color: black;
+  font-family: ARIAL;
+}
+
+.table {
+  width: 70%;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid #ba21bf;
+  padding: 3px 7px 2px 7px;
+}
+
+th {
+  text-align: left;
+  padding: 5px;
+  background-color: #69005b;
+  color: #fff;
+}
+
+.alt td {
+  background-color: #a1b85e;
+}
+
+.adaptivny-slayder {
+  position: relative;
+
+  max-width: 500px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.adaptivny-slayder input[name="kadoves"] {
+  display: none;
+}
+
+.kadoves {
+  bottom: -40px;
+  text-align: center;
+  width: 100%;
+}
+
+.kadoves label {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+  margin: 0 3px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  border: 5px solid #2f363c;
+  background-color: #738290;
+}
+
+#slaid1:checked ~ .kadoves label[for="slaid1"] {
+  background-color: white;
+}
+
+#slaid2:checked ~ .kadoves label[for="slaid2"] {
+  background-color: white;
+}
+
+#slaid3:checked ~ .kadoves label[for="slaid3"] {
+  background-color: rgb(221, 138, 138);
+}
+
+#slaid4:checked ~ .kadoves label[for="slaid4"] {
+  background-color: white;
+}
+
+#slaid5:checked ~ .kadoves label[for="slaid5"] {
+  background-color: white;
+}
+
+.adaptivny-slayder-lasekun {
+  overflow: hidden;
+}
+
+.abusteku-deagulus {
+  display: flex;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.abusteku-deagulus1 img {
+  width: 100%;
+}
+
+.abusteku-deagulus img {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+#slaid1:checked ~ adaptivny-slayder-lasekun abusteku-deagulus {
+  transform: translate(0);
+}
+
+#slaid2:checked ~ .adaptivny-slayder-lasekun .abusteku-deagulus {
+  transform: translateX(-100%);
+}
+
+#slaid3:checked ~ .adaptivny-slayder-lasekun .abusteku-deagulus {
+  transform: translateX(-200%);
+}
+
+#slaid4:checked ~ .adaptivny-slayder-lasekun .abusteku-deagulus {
+  transform: translateX(-300%);
+}
+
+#slaid5:checked ~ .adaptivny-slayder-lasekun .abusteku-deagulus {
+  transform: translateX(-400%);
+}
+
+footer {
+  text-align: center;
+}
+
+.cen {
+  text-align: center;
+}
+
+hr {
+  height: 10px;
+  border: 1;
+  box-shadow: inset 0 9px 9px -3px rgba(11, 99, 184, 0.8);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.di7 {
+  background-color: #ebebeb;
+}
+
+.pra {
+  text-align: right;
+}
+
+.foo {
+  background: #e2ed9c; /* Цвет фона */
+}
+
+.ody {
+  background-image: url(../img/p.png);
+  /* Фоновый рисунок*/
+  color: #000;
+}
+
+.dy {
+  background-image: url(../img/77.jpg);
+  /* Фоновый рисунок*/
+  color: #000;
+  background-size: cover;
+}
+
+.con {
+  display: flex;
+  justify-content: center;
+}
+
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index_style.css}">
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="shortcut icon" th:href="@{/img/Logo.png}" type="image/x-icon">
+    <title>Список товаров: </title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+<div class="general_div ody foo">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
+        <div class="container-fluid" >
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
+                    aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExample04">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/auth/index1">Главная </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/product">Каталог товаров</a>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/auth/about">О нас</a>
+                    </li>
+
+                </ul>
+                <a class="navbar-nav   mb-2 mb-md-0 nav-item nav-link pra" href="/auth/login">Авторизация</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="about dy">
+
+        <p class="cen">
+            <a class="btn btn-secondary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Выберите параметры для сортировки, поиска, фильтрации:</a>
+        </p>
+        <div class="row dy">
+            <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <div class="card card-body dy">
+
+                        <form th:method="POST" th:action="@{/product/search}">
+                            <fieldset>
+                                <label for="search">Поиск по имени:</label>
+                                <br>
+                                <input type="search" name="search" th:value="*{value_search}" id="search">
+                                <br>
+                                <p>Цена, р:</p>
+
+                                <label for="from">От</label>
+
+                                <input type="text" name="from" th:value="*{value_price_from}" id="from">
+                                <br>
+                                <label for="to">До</label>
+                                <input type="text" name="to" th:value="*{value_price_to}" id="to">
+                                <br>
+                                <br>
+                                <input type="radio" id="ascending_price" name="price" value="sorted_by_ascending_price">
+                                <label for="ascending_price">По возрастанию цен</label>
+                                <br>
+                                <br>
+                                <input type="radio" id="descending_price" name="price" value="sorted_by_descending_price">
+                                <label for="descending_price">По убыванию цен</label>
+                                <br>
+                                <hr>
+                                <p>Категория товаров:</p>
+                                <input type="radio" id="furniture" name="category" value="furniture">
+                                <label for="furniture">Акустические гитары</label>
+                                <br>
+                                <br>
+                                <input type="radio" id="appliances" name="category" value="appliances">
+                                <label for="appliances">Электрогитары</label>
+                                <br>
+                                <br>
+                                <input type="radio" id="bass" name="category" value="bass">
+                                <label for="bass">Бас-гитары</label>
+                                <br>
+                                <input type="submit" class="w-100 btn btn-lg btn-primary" style="width:150px!important" value="Найти">
+                            </fieldset>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <h5>Результат: </h5>
+            <div class="flex-container">
+            <div class="product card"  style="width: 20rem;" th:each="product : ${search_product}">
+                <img th:src="'/img/' + ${product.imageList[0].getFileName()}" width="300px">
+                <div class="di7">
+                    <div class="card-body cen">
+                <a th:href="@{/product/info/{id}(id=${product.getId()})}" th:text="${product.getTitle()}"></a>
+                <p th:text="'Цена: ' + ${product.getPrice()}"></p>
+            </div>
+            </div>
+            </div>
+            </div>
+
+        </div>
+
+
+
+        <hr>
+
+        <h5>Доступные товары: </h5>
+        <div class="flex-container">
+                <div class="product card"  style="width: 20rem;" th:each="product : ${products}">
+                    <img th:src="'/img/' + ${product.imageList[0].getFileName()}" width="300px">
+                    <div class="di7">
+                    <div class="card-body cen">
+                    <a th:href="@{/product/info/{id}(id=${product.getId()})}" th:text="${product.getTitle()}" id="title"></a>
+                    <p th:text="'Цена: ' + ${product.getPrice()}"></p>
+                    <a href="#" class="btn btn-success">Добавить в корзину</a>
+                    </div>
+                    </div>
+                </div>
+        </div>
+
+        <br>
+        <hr>
+        <footer>
+            <p ><strong>My Site</strong></p>
+            <p>&copy; This is My Site</p>
+        </footer>
+    </div>
+</div>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>

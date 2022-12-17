@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index_style.css}">
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="shortcut icon" th:href="@{/img/Logo.png}" type="image/x-icon">
+    <title>Интернет магазин</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+<div class="general_div ody foo">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
+        <div class="container-fluid" >
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
+                    aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExample04">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/auth/index1">Главная </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/product">Каталог инструментов</a>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/auth/about">О нас</a>
+                    </li>
+
+                </ul>
+                <a class="navbar-nav   mb-2 mb-md-0 nav-item nav-link pra" href="/auth/login">Авторизация</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container col-xxl-8 px-4 py-5 dy cen">
+
+        <h1 class="display-5 fw-bold lh-1 mb-3">Музыкальные товары</h1>
+        <p class="lead">КРУПНЕЙШАЯ СЕТЬ МУЗЫКАЛЬНЫХ МАГАЗИНОВ</p>
+        <div class="col-12">
+            <div class="image" id="firstEl">
+                <div class="adaptivny-slayder">
+                    <input type="radio" name="kadoves" id="slaid1" checked>
+                    <input type="radio" name="kadoves" id="slaid2">
+                    <input type="radio" name="kadoves" id="slaid3">
+                    <input type="radio" name="kadoves" id="slaid4">
+                    <input type="radio" name="kadoves" id="slaid5">
+                    <div class="kadoves">
+                        <label for="slaid1"></label>
+                        <label for="slaid2"></label>
+                        <label for="slaid3"></label>
+                        <label for="slaid4"></label>
+                        <label for="slaid5"></label>
+                    </div>
+                    <div class="adaptivny-slayder-lasekun">
+                        <div class="one_wayticket">
+                            <img th:src="@{/img/2.jpg}" alt="1" width="350px">
+                            <img th:src="@{/img/3.jpg}" alt="2" width="350px">
+                            <img th:src="@{/img/4.jpg}" alt="3" width="35px">
+                            <img th:src="@{/img/5.jpg}" alt="4" width="350px">
+                            <img th:src="@{/img/6.jpg}" alt="5" width="350px">
+                            <img th:src="@{/img/7.jpg}" alt="6" width="350px">
+                            <img th:src="@{/img/1.jpg}" alt="6" width="350px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<br>
+<hr>
+    <footer>
+        <p ><strong>My Site</strong></p>
+        <p>&copy; This is My Site</p>
+    </footer>
+
+</div>
+
+
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>

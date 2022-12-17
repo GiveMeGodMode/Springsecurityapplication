@@ -1,0 +1,66 @@
+body {
+    background: rgb(83, 32, 32);
+}
+#form_login {
+    background: rgb(187, 197, 189);
+    margin: 0 auto;
+    padding: 25px 0 0;
+    text-align: center;
+    width: 500px;
+    height: 440px;
+}
+#form_login h1 {
+    color: rgb(172, 197, 7);
+    font: bold 25px Arial;
+}
+#form_login input[type="text"],
+#form_login input[type="password"] {
+    border: 1px solid #bb4351;
+    color: #48a873;
+    font: 25px Arial;
+    margin: 0 0 10px;
+    padding: 15px 10px 15px 40px;
+    width: 600px;
+}
+font {
+    color: #95c793;
+    font: 14px Arial;
+}
+
+#username {
+    background-position: 4px -68px !important
+}
+
+#password {
+    background-position: 4px -101px !important
+}
+
+#form_login input[type="text"]:focus,
+#form_login input[type="password"]:focus {
+    border: 2px solid rgb(29, 54, 194);
+    outline: none;
+}
+
+#form_login input[type="submit"] {
+    background: #a52930;
+    border: 2px solid rgb(71, 160, 41);
+    color: white;
+    font: bold 16px Arial;
+    width: 450px;
+    height: 50px;
+    margin-top: 15px;
+}
+
+div {
+    margin: 20px;
+}
+ .reg{
+     font: bold 16px Arial;
+
+     color: white;
+     background: rgb(3, 33, 116);
+ }
+
+#form_login input[type="submit"]:hover {
+    background: rgb(153, 61, 61);
+}
